@@ -3,264 +3,559 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Portfolio of Mohammed Bilal Osmany, a DevOps Engineer specializing in AWS, Azure, Terraform, Kubernetes, and CI/CD automation.">
-    <meta name="keywords" content="DevOps, AWS, Azure, Terraform, Kubernetes, CI/CD, Cloud Engineer, Mohammed Bilal Osmany">
-    <meta name="author" content="Mohammed Bilal Osmany">
-    <title>Mohammed Bilal Osmany - DevOps Portfolio</title>
-    <link rel="icon" type="image/png" href="https://www.devops.com/wp-content/uploads/2020/01/devops-icon.png">
+    <title>Mohammed Bilal Osmany | Senior Platform (DevOps) Engineer</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
-        html {
-            scroll-behavior: smooth;
+        .gradient-text {
+            background: linear-gradient(90deg, #3b82f6, #10b981);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
         }
-        .slider-container {
-            overflow: hidden;
+        .card-hover:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+        .nav-link::after {
+            content: '';
+            display: block;
+            width: 0;
+            height: 2px;
+            background: #3b82f6;
+            transition: width .3s;
+        }
+        .nav-link:hover::after {
             width: 100%;
-            position: relative;
         }
-        .slider {
-            display: flex;
-            transition: transform 0.5s ease-in-out;
+        .tech-icon {
+            transition: all 0.3s ease;
         }
-        .slide {
-            min-width: 100%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
+        .tech-icon:hover {
+            transform: scale(1.1);
+            filter: drop-shadow(0 0 8px rgba(59, 130, 246, 0.5));
         }
-        .cert-logo {
-            max-width: 50px;
-            height: auto;
-            margin-right: 1rem;
+        .animated-bg {
+            animation: gradient 15s ease infinite;
+            background-size: 400% 400%;
         }
-        .award-icon {
-            max-width: 40px;
-            height: auto;
-            margin-right: 1rem;
-        }
-        .hero-bg {
-            background-image: url('https://www.redhat.com/rhdc/managed-files/devops-loop_1.png');
-            background-size: cover;
-            background-position: center;
-        }
-        .skill-card {
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-        .skill-card:hover {
-            transform: scale(1.05);
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-        }
-        .nav-link {
-            transition: color 0.3s ease;
-        }
-        .nav-link:hover {
-            color: #93c5fd;
-        }
-        .slider-dots {
-            display: flex;
-            justify-content: center;
-            margin-top: 1rem;
-        }
-        .dot {
-            width: 10px;
-            height: 10px;
-            background-color: #bbb;
-            border-radius: 50%;
-            margin: 0 5px;
-            cursor: pointer;
-            transition: background-color 0.3s ease;
-        }
-        .dot.active {
-            background-color: #2563eb;
-        }
-        @media (max-width: 640px) {
-            .skill-card {
-                width: 80%;
-            }
-            .cert-logo {
-                max-width: 40px;
-            }
+        @keyframes gradient {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
         }
     </style>
 </head>
-<body class="bg-gradient-to-b from-gray-50 to-gray-200 font-sans">
+<body class="font-sans bg-gray-50 text-gray-800">
     <!-- Navigation -->
-    <nav class="bg-indigo-800 text-white p-5 sticky top-0 z-10 shadow-lg">
-        <div class="container mx-auto flex justify-between items-center">
-            <div></div>
-            <ul class="flex space-x-8">
-                <li><a href="#home" class="nav-link text-lg">Home</a></li>
-                <li><a href="#about" class="nav-link text-lg">About</a></li>
-                <li><a href="#skills" class="nav-link text-lg">Skills</a></li>
-                <li><a href="#experience" class="nav-link text-lg">Experience</a></li>
-                <li><a href="#projects" class="nav-link text-lg">Projects</a></li>
-                <li><a href="#certifications" class="nav-link text-lg">Certifications</a></li>
-                <li><a href="#awards" class="nav-link text-lg">Awards</a></li>
-                <li><a href="#contact" class="nav-link text-lg">Contact</a></li>
-            </ul>
+    <nav class="bg-white shadow-sm sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <div class="flex items-center">
+                    <a href="#" class="flex-shrink-0 flex items-center">
+                        <img class="h-8 w-8" src="https://via.placeholder.com/32x32/3b82f6/ffffff?text=MBO" alt="MBO">
+                        <span class="ml-2 text-xl font-bold gradient-text">Mohammed Bilal Osmany</span>
+                    </a>
+                </div>
+                <div class="hidden md:ml-6 md:flex md:items-center md:space-x-8">
+                    <a href="#" class="nav-link px-3 py-2 text-sm font-medium text-gray-900 hover:text-blue-600">Home</a>
+                    <a href="#" class="nav-link px-3 py-2 text-sm font-medium text-gray-900 hover:text-blue-600">Blog</a>
+                    <a href="#contact" class="ml-8 inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm text-white bg-gradient-to-r from-blue-500 to-green-500 hover:from-blue-600 hover:to-green-600">Contact</a>
+                </div>
+                <div class="-mr-2 flex items-center md:hidden">
+                    <button type="button" id="mobile-menu-button" class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none">
+                        <span class="sr-only">Open main menu</span>
+                        <i class="fas fa-bars"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white shadow-lg">
+            <div class="pt-2 pb-3 space-y-1">
+                <a href="#" class="block px-3 py-2 text-base font-medium text-gray-900 hover:bg-gray-50">Home</a>
+                <a href="#" class="block px-3 py-2 text-base font-medium text-gray-900 hover:bg-gray-50">Blog</a>
+                <a href="#contact" class="block px-3 py-2 text-base font-medium text-blue-600 hover:bg-gray-50">Contact</a>
+            </div>
         </div>
     </nav>
 
     <!-- Hero Section -->
-    <section id="home" class="hero-bg text-white py-24">
-        <div class="container mx-auto text-center bg-black bg-opacity-60 p-10 rounded-xl">
-            <h1 class="text-5xl font-bold mb-4">Mohammed Bilal Osmany</h1>
-            <h2 class="text-xl font-medium mb-6">Shipping code like Docker ships containers, my Kubernetes cluster scales better than my naps, and my CI/CD pipeline never sleeps 🐳😴🚀</h2>
-            <p class="text-lg mb-6">DevOps Engineer | AWS & Azure Cloud | Terraform | Kubernetes | CI/CD Automation</p>
-            <a href="#contact" class="bg-indigo-600 hover:bg-indigo-700 text-white px-8 py-3 rounded-lg transition-colors duration-300">Get in Touch</a>
+    <header class="relative bg-gradient-to-br from-blue-50 to-green-50 py-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="lg:grid lg:grid-cols-12 lg:gap-8">
+                <div class="sm:text-center md:max-w-2xl md:mx-auto lg:col-span-6 lg:text-left lg:flex lg:items-center">
+                    <div>
+                        <h1 class="text-4xl tracking-tight font-extrabold text-gray-900 sm:text-5xl md:text-6xl">
+                            <span class="block">Hi, I'm Mohammed Bilal Osmany –</span>
+                            <span class="block gradient-text">DevOps & SRE Engineer</span>
+                        </h1>
+                        <p class="mt-3 text-base text-gray-500 sm:mt-5 sm:text-lg sm:max-w-xl sm:mx-auto md:mt-5 md:text-xl lg:mx-0">
+                            I build scalable, reliable platforms with a focus on real-world impact and thoughtful design.
+                        </p>
+                        <div class="mt-8 sm:max-w-lg sm:mx-auto sm:text-center lg:text-left lg:mx-0">
+                            <div class="flex space-x-4">
+                                <a href="#services" class="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-gradient-to-r from-blue-500 to-green-500 hover:from-blue-600 hover:to-green-600">
+                                    My Services
+                                </a>
+                                <a href="#contact" class="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-blue-700 bg-blue-100 hover:bg-blue-200">
+                                    Contact Me
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="mt-12 relative sm:max-w-lg sm:mx-auto lg:mt-0 lg:max-w-none lg:mx-0 lg:col-span-6 lg:flex lg:items-center">
+                    <div class="relative mx-auto w-full rounded-lg shadow-lg lg:max-w-md">
+                        <div class="bg-white p-8 rounded-lg">
+                            <h3 class="text-lg font-medium text-gray-900 mb-4">Platform Engineering</h3>
+                            <p class="text-gray-600 mb-6">Welcome to the heart of Software Development (DevOps) Engineering</p>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="px-3 py-1 bg-blue-100 text-blue-800 text-xs font-medium rounded-full">Kubernetes</span>
+                                <span class="px-3 py-1 bg-green-100 text-green-800 text-xs font-medium rounded-full">Terraform</span>
+                                <span class="px-3 py-1 bg-yellow-100 text-yellow-800 text-xs font-medium rounded-full">AWS</span>
+                                <span class="px-3 py-1 bg-purple-100 text-purple-800 text-xs font-medium rounded-full">GCP</span>
+                                <span class="px-3 py-1 bg-pink-100 text-pink-800 text-xs font-medium rounded-full">GitOps</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-    </section>
+    </header>
 
-    <!-- About Section -->
-    <section id="about" class="py-20 bg-gradient-to-r from-indigo-100 to-purple-100">
-        <div class="container mx-auto">
-            <h2 class="text-3xl font-bold text-center mb-10 text-indigo-900">About Me</h2>
-            <div class="flex flex-col md:flex-row items-center">
-                <img src="https://www.redhat.com/rhdc/managed-files/devops-tools.png" alt="DevOps Tools" class="w-full md:w-1/3 rounded-lg mb-6 md:mb-0 md:mr-10" loading="lazy">
-                <div>
-                    <p class="text-lg text-gray-800 leading-relaxed">DevOps Engineer with over 3 years of experience in designing scalable CI/CD pipelines and automating secure cloud infrastructure. Proficient in Terraform, Kubernetes, Jenkins, Docker, AWS, and Azure, with a proven track record of reducing deployment time by 40% and improving system uptime by 20%. Dedicated to enhancing reliability, automation, and cost efficiency through cloud-native DevOps practices.</p>
+    <!-- Services Section -->
+    <section id="services" class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center">
+                <h2 class="text-3xl font-extrabold text-gray-900 sm:text-4xl">
+                    My <span class="gradient-text">Expertise</span>
+                </h2>
+                <p class="mt-4 max-w-2xl text-xl text-gray-500 mx-auto">
+                    Comprehensive DevOps and Platform Engineering services to power your infrastructure
+                </p>
+            </div>
+
+            <div class="mt-16 grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+                <!-- Service Card 1 -->
+                <div class="bg-white rounded-xl shadow-md overflow-hidden card-hover transition-all duration-300">
+                    <div class="p-6">
+                        <div class="flex items-center">
+                            <div class="flex-shrink-0 bg-blue-100 p-3 rounded-lg">
+                                <i class="fas fa-code-branch text-blue-600 text-xl"></i>
+                            </div>
+                            <h3 class="ml-4 text-lg font-medium text-gray-900">CI/CD Automation</h3>
+                        </div>
+                        <p class="mt-4 text-gray-500">
+                            Experienced in CI/CD Automation with GitOps: Streamlining Deployments, Enhancing Reliability.
+                        </p>
+                        <div class="mt-6">
+                            <a href="#" class="text-blue-600 hover:text-blue-800 font-medium">Learn more →</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Service Card 2 -->
+                <div class="bg-white rounded-xl shadow-md overflow-hidden card-hover transition-all duration-300">
+                    <div class="p-6">
+                        <div class="flex items-center">
+                            <div class="flex-shrink-0 bg-green-100 p-3 rounded-lg">
+                                <i class="fas fa-cloud text-green-600 text-xl"></i>
+                            </div>
+                            <h3 class="ml-4 text-lg font-medium text-gray-900">Cloud & On-Prem</h3>
+                        </div>
+                        <p class="mt-4 text-gray-500">
+                            Expert in Cloud & On-Prem Solutions | Deploying Scalable Infrastructure with IaC Automation.
+                        </p>
+                        <div class="mt-6">
+                            <a href="#" class="text-blue-600 hover:text-blue-800 font-medium">Learn more →</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Service Card 3 -->
+                <div class="bg-white rounded-xl shadow-md overflow-hidden card-hover transition-all duration-300">
+                    <div class="p-6">
+                        <div class="flex items-center">
+                            <div class="flex-shrink-0 bg-red-100 p-3 rounded-lg">
+                                <i class="fas fa-shield-alt text-red-600 text-xl"></i>
+                            </div>
+                            <h3 class="ml-4 text-lg font-medium text-gray-900">Security & Compliance</h3>
+                        </div>
+                        <p class="mt-4 text-gray-500">
+                            Ensuring Robust Infrastructure Security | Implementing Best Practices for Cloud & On-Prem Environments
+                        </p>
+                        <div class="mt-6">
+                            <a href="#" class="text-blue-600 hover:text-blue-800 font-medium">Learn more →</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Service Card 4 -->
+                <div class="bg-white rounded-xl shadow-md overflow-hidden card-hover transition-all duration-300">
+                    <div class="p-6">
+                        <div class="flex items-center">
+                            <div class="flex-shrink-0 bg-purple-100 p-3 rounded-lg">
+                                <i class="fab fa-docker text-purple-600 text-xl"></i>
+                            </div>
+                            <h3 class="ml-4 text-lg font-medium text-gray-900">Kubernetes & Container Orchestration</h3>
+                        </div>
+                        <p class="mt-4 text-gray-500">
+                            Optimizing Kubernetes & Containerized Workloads for Performance & Scalability.
+                        </p>
+                        <div class="mt-6">
+                            <a href="#" class="text-blue-600 hover:text-blue-800 font-medium">Learn more →</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Service Card 5 -->
+                <div class="bg-white rounded-xl shadow-md overflow-hidden card-hover transition-all duration-300">
+                    <div class="p-6">
+                        <div class="flex items-center">
+                            <div class="flex-shrink-0 bg-yellow-100 p-3 rounded-lg">
+                                <i class="fas fa-chart-line text-yellow-600 text-xl"></i>
+                            </div>
+                            <h3 class="ml-4 text-lg font-medium text-gray-900">Observability & Monitoring</h3>
+                        </div>
+                        <p class="mt-4 text-gray-500">
+                            Full-Stack Observability: Proactive AI powered Monitoring & Alerting for System Resilience.
+                        </p>
+                        <div class="mt-6">
+                            <a href="#" class="text-blue-600 hover:text-blue-800 font-medium">Learn more →</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Service Card 6 -->
+                <div class="bg-white rounded-xl shadow-md overflow-hidden card-hover transition-all duration-300">
+                    <div class="p-6">
+                        <div class="flex items-center">
+                            <div class="flex-shrink-0 bg-indigo-100 p-3 rounded-lg">
+                                <i class="fas fa-cogs text-indigo-600 text-xl"></i>
+                            </div>
+                            <h3 class="ml-4 text-lg font-medium text-gray-900">Site Reliability Engineering (SRE)</h3>
+                        </div>
+                        <p class="mt-4 text-gray-500">
+                            Experienced in Driving Reliability & Performance with SRE Principles & Best Practices.
+                        </p>
+                        <div class="mt-6">
+                            <a href="#" class="text-blue-600 hover:text-blue-800 font-medium">Learn more →</a>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Skills Slider -->
-    <section id="skills" class="py-20 bg-gradient-to-r from-purple-100 to-pink-100">
-        <div class="container mx-auto">
-            <h2 class="text-3xl font-bold text-center mb-10 text-purple-900">Technical Skills</h2>
-            <div class="slider-container">
-                <div class="slider">
-                    <div class="slide">
-                        <div class="flex flex-wrap justify-center gap-6">
-                            <div class="skill-card bg-white p-6 rounded-lg shadow-lg flex items-center">
-                                <img src="https://www.docker.com/wp-content/uploads/2022/03/vertical-logo-monochromatic.png" alt="Docker Icon" class="w-12 h-12 mr-3" loading="lazy">
-                                <span class="text-lg font-semibold">🐳 Docker</span>
-                            </div>
-                            <div class="skill-card bg-white p-6 rounded-lg shadow-lg flex items-center">
-                                <img src="https://www.stickpng.com/assets/images/5872889bc3331b269941b31f.png" alt="Kubernetes Icon" class="w-12 h-12 mr-3" loading="lazy">
-                                <span class="text-lg font-semibold">☸️ Kubernetes</span>
-                            </div>
-                            <div class="skill-card bg-white p-6 rounded-lg shadow-lg flex items-center">
-                                <img src="https://img.icons8.com/color/512/terraform.png" alt="Terraform Icon" class="w-12 h-12 mr-3" loading="lazy">
-                                <span class="text-lg font-semibold">🌍 Terraform</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="slide">
-                        <div class="flex flex-wrap justify-center gap-6">
-                            <div class="skill-card bg-white p-6 rounded-lg shadow-lg flex items-center">
-                                <img src="https://get.jenkins.io/art/jenkins-logo/512x512/logo.png" alt="Jenkins Icon" class="w-12 h-12 mr-3" loading="lazy">
-                                <span class="text-lg font-semibold">⚙️ Jenkins</span>
-                            </div>
-                            <div class="skill-card bg-white p-6 rounded-lg shadow-lg flex items-center">
-                                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/93/Amazon_Web_Services_Logo.svg/512px-Amazon_Web_Services_Logo.svg.png" alt="AWS Icon" class="w-12 h-12 mr-3" loading="lazy">
-                                <span class="text-lg font-semibold">☁️ AWS</span>
-                            </div>
-                            <div class="skill-card bg-white p-6 rounded-lg shadow-lg flex items-center">
-                                <img src="https://azure.microsoft.com/en-us/blog/wp-content/uploads/2021/05/Azure-Icon-Fluent-150x150.png" alt="Azure Icon" class="w-12 h-12 mr-3" loading="lazy">
-                                <span class="text-lg font-semibold">🌐 Azure</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="slide">
-                        <div class="flex flex-wrap justify-center gap-6">
-                            <div class="skill-card bg-white p-6 rounded-lg shadow-lg flex items-center">
-                                <img src="https://www.python.org/static/community_logos/python-logo-master-v3-TM.png" alt="Python Icon" class="w-12 h-12 mr-3" loading="lazy">
-                                <span class="text-lg font-semibold">🐍 Python</span>
-                            </div>
-                            <div class="skill-card bg-white p-6 rounded-lg shadow-lg flex items-center">
-                                <img src="https://techicons.dev/icons/prometheus.png" alt="Prometheus Icon" class="w-12 h-12 mr-3" loading="lazy">
-                                <span class="text-lg font-semibold">📊 Prometheus</span>
-                            </div>
-                            <div class="skill-card bg-white p-6 rounded-lg shadow-lg flex items-center">
-                                <img src="https://techicons.dev/icons/grafana.png" alt="Grafana Icon" class="w-12 h-12 mr-3" loading="lazy">
-                                <span class="text-lg font-semibold">📈 Grafana</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="slide">
-                        <div class="flex flex-wrap justify-center gap-6">
-                            <div class="skill-card bg-white p-6 rounded-lg shadow-lg flex items-center">
-                                <img src="https://github.com/odb/official-bash-logo/raw/master/assets/Logos/Icons/PNG/512x512.png" alt="Bash Icon" class="w-12 h-12 mr-3" loading="lazy">
-                                <span class="text-lg font-semibold">📜 Bash</span>
-                            </div>
-                            <div class="skill-card bg-white p-6 rounded-lg shadow-lg flex items-center">
-                                <img src="https://img.icons8.com/color/512/google-cloud.png" alt="Google Cloud Icon" class="w-12 h-12 mr-3" loading="lazy">
-                                <span class="text-lg font-semibold">☁️ Google Cloud</span>
-                            </div>
-                            <div class="skill-card bg-white p-6 rounded-lg shadow-lg flex items-center">
-                                <img src="https://helm.sh/img/helm.svg" alt="Helm Icon" class="w-12 h-12 mr-3" loading="lazy">
-                                <span class="text-lg font-semibold">⛵ Helm</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="slide">
-                        <div class="flex flex-wrap justify-center gap-6">
-                            <div class="skill-card bg-white p-6 rounded-lg shadow-lg flex items-center">
-                                <img src="https://argoproj.github.io/argo-site/static/logo.svg" alt="Argo CD Icon" class="w-12 h-12 mr-3" loading="lazy">
-                                <span class="text-lg font-semibold">🚀 Argo CD</span>
-                            </div>
-                            <div class="skill-card bg-white p-6 rounded-lg shadow-lg flex items-center">
-                                <img src="https://www.ansible.com/favicon.ico" alt="Ansible Icon" class="w-12 h-12 mr-3" loading="lazy">
-                                <span class="text-lg font-semibold">🤖 Ansible</span>
-                            </div>
-                            <div class="skill-card bg-white p-6 rounded-lg shadow-lg flex items-center">
-                                <img src="https://git-scm.com/images/logos/downloads/Git-Icon-1788C.png" alt="Git Icon" class="w-12 h-12 mr-3" loading="lazy">
-                                <span class="text-lg font-semibold">📚 Git</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="slide">
-                        <div class="flex flex-wrap justify-center gap-6">
-                            <div class="skill-card bg-white p-6 rounded-lg shadow-lg flex items-center">
-                                <img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" alt="GitHub Icon" class="w-12 h-12 mr-3" loading="lazy">
-                                <span class="text-lg font-semibold">🐙 GitHub</span>
-                            </div>
-                            <div class="skill-card bg-white p-6 rounded-lg shadow-lg flex items-center">
-                                <img src="https://circleci.com/brand/circleci-symbol-black.svg" alt="CircleCI Icon" class="w-12 h-12 mr-3" loading="lazy">
-                                <span class="text-lg font-semibold">🔄 CircleCI</span>
-                            </div>
-                        </div>
-                    </div>
+    <!-- Tech Stack Section -->
+    <section class="py-16 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center">
+                <h2 class="text-3xl font-extrabold text-gray-900 sm:text-4xl">
+                    My <span class="gradient-text">Tech Stack</span>
+                </h2>
+                <p class="mt-4 max-w-2xl text-xl text-gray-500 mx-auto">
+                    Tools and technologies I work with to build robust platforms
+                </p>
+            </div>
+
+            <div class="mt-12 grid grid-cols-2 gap-8 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6">
+                <div class="col-span-1 flex justify-center">
+                    <img src="https://binyam.io/wp-content/uploads/2025/02/Blue-Ship-Wheel-Symbol.png" alt="Kubernetes" class="h-16 tech-icon">
                 </div>
-                <!-- Slider Navigation -->
-                <div class="flex justify-center mt-6 space-x-4">
-                    <button id="prev" class="bg-indigo-600 text-white p-3 rounded-full hover:bg-indigo-700 transition-colors duration-300"><svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path></svg></button>
-                    <button id="next" class="bg-indigo-600 text-white p-3 rounded-full hover:bg-indigo-700 transition-colors duration-300"><svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg></button>
+                <div class="col-span-1 flex justify-center">
+                    <img src="https://binyam.io/wp-content/uploads/2025/02/gcp.png" alt="GCP" class="h-16 tech-icon">
                 </div>
-                <!-- Slider Dots -->
-                <div class="slider-dots" id="dots"></div>
+                <div class="col-span-1 flex justify-center">
+                    <img src="https://binyam.io/wp-content/uploads/2025/02/AWS-Icon.png" alt="AWS" class="h-16 tech-icon">
+                </div>
+                <div class="col-span-1 flex justify-center">
+                    <img src="https://binyam.io/wp-content/uploads/2025/02/Terraform-Icon.png" alt="Terraform" class="h-16 tech-icon">
+                </div>
+                <div class="col-span-1 flex justify-center">
+                    <img src="https://binyam.io/wp-content/uploads/2025/02/Argo-CD-Icon.png" alt="Argo CD" class="h-16 tech-icon">
+                </div>
+                <div class="col-span-1 flex justify-center">
+                    <img src="https://binyam.io/wp-content/uploads/2025/02/Flame-Prometheus-Logo.png" alt="Prometheus" class="h-16 tech-icon">
+                </div>
+                <div class="col-span-1 flex justify-center">
+                    <img src="https://binyam.io/wp-content/uploads/2025/02/Rancher-Icon.png" alt="Rancher" class="h-16 tech-icon">
+                </div>
+                <div class="col-span-1 flex justify-center">
+                    <img src="https://binyam.io/wp-content/uploads/2025/02/Jenkins-Icon.png" alt="Jenkins" class="h-16 tech-icon">
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- Experience Section -->
-    <section id="experience" class="py-20 bg-gradient-to-r from-green-100 to-teal-100">
-        <div class="container mx-auto">
-            <h2 class="text-3xl font-bold text-center mb-10 text-teal-900">Professional Experience</h2>
-            <div class="space-y-10">
-                <div class="bg-white p-8 rounded-lg shadow-lg">
-                    <h3 class="text-2xl font-semibold text-gray-800">Cloud Support Analyst, Accenture</h3>
-                    <p class="text-gray-600">Feb 2025 - Present</p>
-                    <ul class="list-disc pl-6 mt-4 text-gray-700">
-                        <li>Architected highly available and fault-tolerant AWS infrastructure using Auto Scaling, ELB, and Route 53.</li>
-                        <li>Developed reusable Terraform modules to provision and manage cloud resources with versioned state in S3.</li>
-                        <li>Maintained and scaled Kubernetes clusters, deploying containerized applications using blue-green strategies.</li>
-                        <li>Configured Kubernetes Ingress controllers, Secrets, and ConfigMaps to enhance application security.</li>
-                        <li>Managed distributed Jenkins pipelines (master-agent setup) to enable faster parallel deployments.</li>
-                        <li>Implemented proactive monitoring with Prometheus and Grafana, reducing incident response time by 25%.</li>
+    <!-- Certifications Section -->
+    <section class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center">
+                <h2 class="text-3xl font-extrabold text-gray-900 sm:text-4xl">
+                    My <span class="gradient-text">Certifications</span>
+                </h2>
+                <p class="mt-4 max-w-2xl text-xl text-gray-500 mx-auto">
+                    Industry-recognized certifications across AWS, Azure, GCP & more
+                </p>
+            </div>
+
+            <div class="mt-12 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+                <div class="bg-gray-50 p-6 rounded-lg">
+                    <div class="flex items-center">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/9/93/Amazon_Web_Services_Logo.svg" alt="AWS" class="h-8 w-8 mr-3">
+                        <h3 class="text-lg font-medium text-gray-900">AWS Certified Solutions Architect – Associate</h3>
+                    </div>
+                </div>
+                <div class="bg-gray-50 p-6 rounded-lg">
+                    <div class="flex items-center">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/9/93/Amazon_Web_Services_Logo.svg" alt="AWS" class="h-8 w-8 mr-3">
+                        <h3 class="text-lg font-medium text-gray-900">AWS Certified Solutions Architect – Professional</h3>
+                    </div>
+                </div>
+                <div class="bg-gray-50 p-6 rounded-lg">
+                    <div class="flex items-center">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/9/93/Amazon_Web_Services_Logo.svg" alt="AWS" class="h-8 w-8 mr-3">
+                        <h3 class="text-lg font-medium text-gray-900">AWS Certified Security – Specialty</h3>
+                    </div>
+                </div>
+                <div class="bg-gray-50 p-6 rounded-lg">
+                    <div class="flex items-center">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Google_Cloud_logo.svg" alt="GCP" class="h-8 w-8 mr-3">
+                        <h3 class="text-lg font-medium text-gray-900">Google Professional Cloud Architect</h3>
+                    </div>
+                </div>
+                <div class="bg-gray-50 p-6 rounded-lg">
+                    <div class="flex items-center">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Google_Cloud_logo.svg" alt="GCP" class="h-8 w-8 mr-3">
+                        <h3 class="text-lg font-medium text-gray-900">Google Professional DevOps Engineer</h3>
+                    </div>
+                </div>
+                <div class="bg-gray-50 p-6 rounded-lg">
+                    <div class="flex items-center">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Google_Cloud_logo.svg" alt="GCP" class="h-8 w-8 mr-3">
+                        <h3 class="text-lg font-medium text-gray-900">Google Professional Machine Learning Engineer</h3>
+                    </div>
+                </div>
+                <div class="bg-gray-50 p-6 rounded-lg">
+                    <div class="flex items-center">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Google_Cloud_logo.svg" alt="GCP" class="h-8 w-8 mr-3">
+                        <h3 class="text-lg font-medium text-gray-900">Google Professional Data Engineer</h3>
+                    </div>
+                </div>
+                <div class="bg-gray-50 p-6 rounded-lg">
+                    <div class="flex items-center">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/9/96/Microsoft_logo_%282012%29.svg" alt="Microsoft" class="h-8 w-8 mr-3">
+                        <h3 class="text-lg font-medium text-gray-900">Microsoft Certified: Azure Fundamentals (AI-900)</h3>
+                    </div>
+                </div>
+                <div class="bg-gray-50 p-6 rounded-lg">
+                    <div class="flex items-center">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/9/96/Microsoft_logo_%282012%29.svg" alt="Microsoft" class="h-8 w-8 mr-3">
+                        <h3 class="text-lg font-medium text-gray-900">Microsoft Certified: Azure Administrator Associate (AZ-104)</h3>
+                    </div>
+                </div>
+                <div class="bg-gray-50 p-6 rounded-lg">
+                    <div class="flex items-center">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/9/96/Microsoft_logo_%282012%29.svg" alt="Microsoft" class="h-8 w-8 mr-3">
+                        <h3 class="text-lg font-medium text-gray-900">Microsoft Certified: Azure Solutions Architect Expert (AZ-305)</h3>
+                    </div>
+                </div>
+                <div class="bg-gray-50 p-6 rounded-lg">
+                    <div class="flex items-center">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/9/96/Microsoft_logo_%282012%29.svg" alt="Microsoft" class="h-8 w-8 mr-3">
+                        <h3 class="text-lg font-medium text-gray-900">Microsoft Certified: Azure DevOps Engineer Expert (AZ-400)</h3>
+                    </div>
+                </div>
+                <div class="bg-gray-50 p-6 rounded-lg">
+                    <div class="flex items-center">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/9/96/Microsoft_logo_%282012%29.svg" alt="Microsoft" class="h-8 w-8 mr-3">
+                        <h3 class="text-lg font-medium text-gray-900">Microsoft Certified: Azure Developer Associate (AZ-204)</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Industries Section -->
+    <section class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center">
+                <h2 class="text-3xl font-extrabold text-gray-900 sm:text-4xl">
+                    Industries <span class="gradient-text">Served</span>
+                </h2>
+                <p class="mt-4 max-w-2xl text-xl text-gray-500 mx-auto">
+                    I architect and automate high-performing infrastructure that powers innovative solutions across industries
+                </p>
+            </div>
+
+            <div class="mt-12 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+                <div class="bg-gray-50 p-6 rounded-lg">
+                    <div class="flex items-center">
+                        <div class="flex-shrink-0 bg-blue-100 p-2 rounded-md">
+                            <i class="fas fa-cloud text-blue-600"></i>
+                        </div>
+                        <h3 class="ml-3 text-lg font-medium text-gray-900">Cloud & SaaS</h3>
+                    </div>
+                </div>
+                <div class="bg-gray-50 p-6 rounded-lg">
+                    <div class="flex items-center">
+                        <div class="flex-shrink-0 bg-green-100 p-2 rounded-md">
+                            <i class="fas fa-money-bill-wave text-green-600"></i>
+                        </div>
+                        <h3 class="ml-3 text-lg font-medium text-gray-900">Finance & FinTech</h3>
+                    </div>
+                </div>
+                <div class="bg-gray-50 p-6 rounded-lg">
+                    <div class="flex items-center">
+                        <div class="flex-shrink-0 bg-red-100 p-2 rounded-md">
+                            <i class="fas fa-heartbeat text-red-600"></i>
+                        </div>
+                        <h3 class="ml-3 text-lg font-medium text-gray-900">Healthcare & Bioengineering</h3>
+                    </div>
+                </div>
+                <div class="bg-gray-50 p-6 rounded-lg">
+                    <div class="flex items-center">
+                        <div class="flex-shrink-0 bg-yellow-100 p-2 rounded-md">
+                            <i class="fas fa-shopping-cart text-yellow-600"></i>
+                        </div>
+                        <h3 class="ml-3 text-lg font-medium text-gray-900">E-commerce & Retail</h3>
+                    </div>
+                </div>
+                <div class="bg-gray-50 p-6 rounded-lg">
+                    <div class="flex items-center">
+                        <div class="flex-shrink-0 bg-purple-100 p-2 rounded-md">
+                            <i class="fas fa-brain text-purple-600"></i>
+                        </div>
+                        <h3 class="ml-3 text-lg font-medium text-gray-900">AI & Machine Learning</h3>
+                    </div>
+                </div>
+                <div class="bg-gray-50 p-6 rounded-lg">
+                    <div class="flex items-center">
+                        <div class="flex-shrink-0 bg-indigo-100 p-2 rounded-md">
+                            <i class="fas fa-industry text-indigo-600"></i>
+                        </div>
+                        <h3 class="ml-3 text-lg font-medium text-gray-900">Manufacturing & IoT</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Me Section -->
+    <section class="py-16 bg-gradient-to-br from-blue-50 to-green-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center">
+                <h2 class="text-3xl font-extrabold text-gray-900 sm:text-4xl">
+                    Why <span class="gradient-text">Work With Me</span>
+                </h2>
+                <p class="mt-4 max-w-2xl text-xl text-gray-600 mx-auto">
+                    4 reasons I excel in Platform Engineering
+                </p>
+            </div>
+
+            <div class="mt-12 grid gap-8 md:grid-cols-2">
+                <div class="bg-white p-8 rounded-xl shadow-md">
+                    <div class="flex">
+                        <div class="flex-shrink-0">
+                            <div class="flex items-center justify-center h-12 w-12 rounded-md bg-blue-500 text-white">
+                                <i class="fas fa-expand"></i>
+                            </div>
+                        </div>
+                        <div class="ml-4">
+                            <h3 class="text-lg font-medium text-gray-900">Scalable & Resilient Infrastructure</h3>
+                            <p class="mt-2 text-gray-600">
+                                I design and automate cloud-native and on-prem platforms, ensuring high availability, scalability, and reliability for mission-critical applications.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white p-8 rounded-xl shadow-md">
+                    <div class="flex">
+                        <div class="flex-shrink-0">
+                            <div class="flex items-center justify-center h-12 w-12 rounded-md bg-green-500 text-white">
+                                <i class="fas fa-lock"></i>
+                            </div>
+                        </div>
+                        <div class="ml-4">
+                            <h3 class="text-lg font-medium text-gray-900">Security & Compliance by Design</h3>
+                            <p class="mt-2 text-gray-600">
+                                I integrate security best practices, automate compliance, and enforce policies across platforms to ensure robust infrastructure protection.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white p-8 rounded-xl shadow-md">
+                    <div class="flex">
+                        <div class="flex-shrink-0">
+                            <div class="flex items-center justify-center h-12 w-12 rounded-md bg-purple-500 text-white">
+                                <i class="fas fa-code-branch"></i>
+                            </div>
+                        </div>
+                        <div class="ml-4">
+                            <h3 class="text-lg font-medium text-gray-900">CI/CD & GitOps Excellence</h3>
+                            <p class="mt-2 text-gray-600">
+                                With expertise in CI/CD pipelines and GitOps workflows, I enable seamless deployments, reducing downtime and accelerating software delivery.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white p-8 rounded-xl shadow-md">
+                    <div class="flex">
+                        <div class="flex-shrink-0">
+                            <div class="flex items-center justify-center h-12 w-12 rounded-md bg-yellow-500 text-white">
+                                <i class="fas fa-chart-bar"></i>
+                            </div>
+                        </div>
+                        <div class="ml-4">
+                            <h3 class="text-lg font-medium text-gray-900">Observability & Performance Optimization</h3>
+                            <p class="mt-2 text-gray-600">
+                                I implement monitoring, logging, and proactive alerting, leveraging tools like Prometheus, Grafana, DataDog, and ELK to maintain peak system performance.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Professional Experience Section -->
+    <section class="py-16 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center">
+                <h2 class="text-3xl font-extrabold text-gray-900 sm:text-4xl">
+                    Professional <span class="gradient-text">Experience</span>
+                </h2>
+            </div>
+
+            <div class="mt-12 space-y-8">
+                <div class="bg-white p-8 rounded-xl shadow-md">
+                    <h3 class="text-xl font-medium text-gray-900">Cloud Support Analyst, Accenture</h3>
+                    <p class="text-gray-500">Feb 2025 - Present</p>
+                    <ul class="mt-4 list-disc list-inside text-gray-600 space-y-2">
+                        <li>Architected highly available and fault-tolerant AWS infrastructure using Auto Scaling, ELB, and Route 53</li>
+                        <li>Developed reusable Terraform modules to provision and manage cloud resources with versioned state in S3</li>
+                        <li>Maintained and scaled Kubernetes clusters, deploying containerized applications using blue-green strategies</li>
+                        <li>Configured Kubernetes Ingress controllers, Secrets, and ConfigMaps to enhance application security</li>
+                        <li>Managed distributed Jenkins pipelines (master-agent setup) to enable faster parallel deployments</li>
+                        <li>Implemented proactive monitoring with Prometheus and Grafana, reducing incident response time by 25%</li>
                     </ul>
                 </div>
-                <div class="bg-white p-8 rounded-lg shadow-lg">
-                    <h3 class="text-2xl font-semibold text-gray-800">Cloud Support Associate, Accenture</h3>
-                    <p class="text-gray-600">March 2022 - Feb 2025</p>
-                    <ul class="list-disc pl-6 mt-4 text-gray-700">
-                        <li>Designed and deployed scalable AWS cloud environments to support production workloads.</li>
-                        <li>Built CI/CD pipelines using Jenkins to streamline deployment across dev and staging environments.</li>
-                        <li>Containerized monolithic applications using Docker, improving portability and maintainability.</li>
-                        <li>Enforced AWS security standards using IAM roles, VPC configuration, and encryption policies.</li>
-                        <li>Provided support for incident troubleshooting by analyzing AWS CloudWatch logs and metrics.</li>
-                        <li>Maintained change and incident documentation in ServiceNow to ensure ITSM compliance.</li>
+
+                <div class="bg-white p-8 rounded-xl shadow-md">
+                    <h3 class="text-xl font-medium text-gray-900">Cloud Support Associate, Accenture</h3>
+                    <p class="text-gray-500">March 2022 - Feb 2025</p>
+                    <ul class="mt-4 list-disc list-inside text-gray-600 space-y-2">
+                        <li>Designed and deployed scalable AWS cloud environments to support production workloads</li>
+                        <li>Built CI/CD pipelines using Jenkins to streamline deployment across dev and staging environments</li>
+                        <li>Containerized monolithic applications using Docker, improving portability and maintainability</li>
+                        <li>Enforced AWS security standards using IAM roles, VPC configuration, and encryption policies</li>
+                        <li>Provided support for incident troubleshooting by analyzing AWS CloudWatch logs and metrics</li>
+                        <li>Maintained change and incident documentation in ServiceNow to ensure ITSM compliance</li>
                     </ul>
                 </div>
             </div>
@@ -268,247 +563,346 @@
     </section>
 
     <!-- Projects Section -->
-    <section id="projects" class="py-20 bg-gradient-to-r from-cyan-100 to-blue-100">
-        <div class="container mx-auto">
-            <h2 class="text-3xl font-bold text-center mb-10 text-blue-900">Projects</h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                <div class="bg-white p-8 rounded-lg shadow-lg">
-                    <h3 class="text-2xl font-semibold text-red-600">Hybrid Multi-Cloud Deployment for Containerized Workloads</h3>
-                    <p class="text-blue-600 mt-2">Tech: AWS, Azure, Kubernetes, Terraform, S3, DynamoDB</p>
-                    <ul class="list-disc pl-6 mt-4 text-gray-800">
-                        <li>Designed and deployed hybrid cloud architecture across AWS and Azure using Kubernetes.</li>
-                        <li>Built reusable Terraform modules for automated provisioning, reducing setup time by 40%.</li>
-                        <li>Integrated S3 and DynamoDB for scalable storage and real-time data access.</li>
-                        <li>Optimized resource usage with auto-scaling and deprovisioning, reducing cloud spend by 20%.</li>
-                        <li>Achieved 99.9% uptime while reducing operational overhead through observability and automation.</li>
+    <section class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center">
+                <h2 class="text-3xl font-extrabold text-gray-900 sm:text-4xl">
+                    Notable <span class="gradient-text">Projects</span>
+                </h2>
+            </div>
+
+            <div class="mt-12 space-y-8">
+                <div class="bg-white p-8 rounded-xl shadow-md">
+                    <h3 class="text-xl font-medium text-gray-900">Hybrid Multi-Cloud Deployment for Containerized Workloads</h3>
+                    <p class="text-gray-500">Tech: AWS, Azure, Kubernetes, Terraform, S3, DynamoDB</p>
+                    <ul class="mt-4 list-disc list-inside text-gray-600 space-y-2">
+                        <li>Designed and deployed hybrid cloud architecture across AWS and Azure using Kubernetes</li>
+                        <li>Built reusable Terraform modules for automated provisioning, reducing setup time by 40%</li>
+                        <li>Integrated S3 and DynamoDB for scalable storage and real-time data access</li>
+                        <li>Optimized resource usage with auto-scaling and deprovisioning, reducing cloud spend by 20%</li>
+                        <li>Achieved 99.9% uptime while reducing operational overhead through observability and automation</li>
                     </ul>
                 </div>
-                <div class="bg-white p-8 rounded-lg shadow-lg">
-                    <h3 class="text-2xl font-semibold text-red-600">CI/CD Modernization for Legacy Application</h3>
-                    <p class="text-blue-600 mt-2">Tech: Docker, Kubernetes (EKS), Jenkins, MySQL, Prometheus, Grafana, Ingress Controller</p>
-                    <ul class="list-disc pl-6 mt-4 text-gray-800">
-                        <li>Migrated a legacy monolithic application into containerized microservices using Docker and Kubernetes (EKS).</li>
-                        <li>Designed blue-green and canary deployment strategies, enabling zero-downtime releases.</li>
-                        <li>Built Jenkins pipelines to automate testing, build, and deployment workflows across environments.</li>
-                        <li>Configured Ingress controllers and health checks for reliable routing and service availability.</li>
-                        <li>Integrated Prometheus and Grafana to monitor app performance and alert on anomalies in real-time.</li>
+
+                <div class="bg-white p-8 rounded-xl shadow-md">
+                    <h3 class="text-xl font-medium text-gray-900">CI/CD Modernization for Legacy Application</h3>
+                    <p class="text-gray-500">Tech: Docker, Kubernetes (EKS), Jenkins, MySQL, Prometheus, Grafana, Ingress Controller</p>
+                    <ul class="mt-4 list-disc list-inside text-gray-600 space-y-2">
+                        <li>Migrated a legacy monolithic application into containerized microservices using Docker and Kubernetes (EKS)</li>
+                        <li>Designed blue-green and canary deployment strategies, enabling zero-downtime releases</li>
+                        <li>Built Jenkins pipelines to automate testing, build, and deployment workflows across environments</li>
+                        <li>Configured Ingress controllers and health checks for reliable routing and service availability</li>
+                        <li>Integrated Prometheus and Grafana to monitor app performance and alert on anomalies in real-time</li>
                     </ul>
                 </div>
-                <div class="bg-white p-8 rounded-lg shadow-lg">
-                    <h3 class="text-2xl font-semibold text-red-600">Predictive Maintenance & Supply Chain Optimization</h3>
-                    <p class="text-blue-600 mt-2">Tech: AWS (SageMaker, Forecast, IoT Core, QuickSight)</p>
-                    <ul class="list-disc pl-6 mt-4 text-gray-800">
-                        <li>Built a lightweight predictive system to support equipment monitoring and supply chain planning.</li>
-                        <li>Ingested sensor data using AWS IoT Core and applied forecasting models to improve maintenance cycles.</li>
-                        <li>Delivered operational dashboards via AWS QuickSight, improving supply chain visibility and efficiency.</li>
-                        <li>Helped reduce downtime and enhance data-driven decision-making in lubricant operations.</li>
+
+                <div class="bg-white p-8 rounded-xl shadow-md">
+                    <h3 class="text-xl font-medium text-gray-900">Predictive Maintenance & Supply Chain Optimization</h3>
+                    <p class="text-gray-500">Tech: AWS (SageMaker, Forecast, IoT Core, QuickSight)</p>
+                    <ul class="mt-4 list-disc list-inside text-gray-600 space-y-2">
+                        <li>Built a lightweight predictive system to support equipment monitoring and supply chain planning</li>
+                        <li>Ingested sensor data using AWS IoT Core and applied forecasting models to improve maintenance cycles</li>
+                        <li>Delivered operational dashboards via AWS QuickSight, improving supply chain visibility and efficiency</li>
+                        <li>Helped reduce downtime and enhance data-driven decision-making in lubricant operations</li>
                     </ul>
                 </div>
-                <div class="bg-white p-8 rounded-lg shadow-lg">
-                    <h3 class="text-2xl font-semibold text-red-600">Delta Utilities</h3>
-                    <p class="text-blue-600 mt-2">Tech: Kubernetes, Helm, AWS EKS, Prometheus, Grafana, Fluentd</p>
-                    <ul class="list-disc pl-6 mt-4 text-gray-800">
-                        <li>Designed and implemented a Kubernetes-based architecture on AWS EKS for a utility management platform, ensuring high availability and scalability.</li>
-                        <li>Utilized Helm charts to manage and deploy complex microservices, reducing deployment complexity by 30%.</li>
-                        <li>Implemented a centralized logging system using Fluentd to aggregate logs from all microservices, improving debugging efficiency.</li>
-                        <li>Integrated Prometheus and Grafana for real-time monitoring, setting up alerts for resource bottlenecks and ensuring 99.95% uptime.</li>
-                        <li>Optimized Kubernetes resource quotas and auto-scaling policies, reducing operational costs by 15% while handling peak loads.</li>
+
+                <div class="bg-white p-8 rounded-xl shadow-md">
+                    <h3 class="text-xl font-medium text-gray-900">Delta Utilities</h3>
+                    <p class="text-gray-500">Tech: Kubernetes, Helm, AWS EKS, Prometheus, Grafana, Fluentd</p>
+                    <ul class="mt-4 list-disc list-inside text-gray-600 space-y-2">
+                        <li>Designed and implemented a Kubernetes-based architecture on AWS EKS for a utility management platform</li>
+                        <li>Utilized Helm charts to manage and deploy complex microservices, reducing deployment complexity by 30%</li>
+                        <li>Implemented a centralized logging system using Fluentd to aggregate logs from all microservices</li>
+                        <li>Integrated Prometheus and Grafana for real-time monitoring, ensuring 99.95% uptime</li>
+                        <li>Optimized Kubernetes resource quotas and auto-scaling policies, reducing operational costs by 15%</li>
                     </ul>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Certifications Section -->
-    <section id="certifications" class="py-20 bg-gradient-to-r from-blue-100 to-indigo-100">
-        <div class="container mx-auto">
-            <h2 class="text-3xl font-bold text-center mb-10 text-indigo-900">Certifications</h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <div class="bg-white p-6 rounded-lg shadow-lg flex items-center">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/93/Amazon_Web_Services_Logo.svg/512px-Amazon_Web_Services_Logo.svg.png" alt="AWS Logo" class="cert-logo" loading="lazy">
-                    <div>
-                        <h3 class="text-lg font-semibold text-gray-800">AWS Certified Solutions Architect - Associate (SAA-C03)</h3>
-                        <p class="text-gray-600">Amazon Web Services</p>
+    <!-- Blog Section -->
+    <section class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center">
+                <h2 class="text-3xl font-extrabold text-gray-900 sm:text-4xl">
+                    Latest <span class="gradient-text">Insights</span>
+                </h2>
+                <p class="mt-4 max-w-2xl text-xl text-gray-500 mx-auto">
+                    Insights to help you do what you do better, faster and more profitably.
+                </p>
+            </div>
+
+            <div class="mt-12 grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+                <!-- Blog Post 1 -->
+                <div class="bg-white rounded-xl shadow-md overflow-hidden card-hover">
+                    <img class="h-48 w-full object-cover" src="https://binyam.io/wp-content/uploads/2025/06/mcp-k8s-usb-c.webp" alt="Blog post image">
+                    <div class="p-6">
+                        <h3 class="text-xl font-medium text-gray-900">
+                            <a href="#" class="hover:text-blue-600">Unlocking Smarter Kubernetes Troubleshooting with Model Context Protocol (MCP) and Agentic AI</a>
+                        </h3>
+                        <div class="mt-4">
+                            <a href="#" class="text-blue-600 hover:text-blue-800 font-medium">Read more →</a>
+                        </div>
                     </div>
                 </div>
-                <div class="bg-white p-6 rounded-lg shadow-lg flex items-center">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/93/Amazon_Web_Services_Logo.svg/512px-Amazon_Web_Services_Logo.svg.png" alt="AWS Logo" class="cert-logo" loading="lazy">
-                    <div>
-                        <h3 class="text-lg font-semibold text-gray-800">AWS Certified Solutions Architect - Professional (SAP-C02)</h3>
-                        <p class="text-gray-600">Amazon Web Services</p>
+
+                <!-- Blog Post 2 -->
+                <div class="bg-white rounded-xl shadow-md overflow-hidden card-hover">
+                    <img class="h-48 w-full object-cover" src="https://binyam.io/wp-content/uploads/2025/02/Kafka-Stream-Logo-1024x297.webp" alt="Blog post image">
+                    <div class="p-6">
+                        <h3 class="text-xl font-medium text-gray-900">
+                            <a href="#" class="hover:text-blue-600">Kafka and SRE: Building Reliable Event Streaming Infrastructure</a>
+                        </h3>
+                        <div class="mt-4">
+                            <a href="#" class="text-blue-600 hover:text-blue-800 font-medium">Read more →</a>
+                        </div>
                     </div>
                 </div>
-                <div class="bg-white p-6 rounded-lg shadow-lg flex items-center">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/93/Amazon_Web_Services_Logo.svg/512px-Amazon_Web_Services_Logo.svg.png" alt="AWS Logo" class="cert-logo" loading="lazy">
-                    <div>
-                        <h3 class="text-lg font-semibold text-gray-800">AWS Certified Security - Specialty (SCS-C02)</h3>
-                        <p class="text-gray-600">Amazon Web Services</p>
+
+                <!-- Blog Post 3 -->
+                <div class="bg-white rounded-xl shadow-md overflow-hidden card-hover">
+                    <img class="h-48 w-full object-cover" src="https://binyam.io/wp-content/uploads/2025/05/image-1-1024x683.png" alt="Blog post image">
+                    <div class="p-6">
+                        <h3 class="text-xl font-medium text-gray-900">
+                            <a href="#" class="hover:text-blue-600">The Complete Guide to OpenTofu: Why It's Time to Ditch Terraform</a>
+                        </h3>
+                        <div class="mt-4">
+                            <a href="#" class="text-blue-600 hover:text-blue-800 font-medium">Read more →</a>
+                        </div>
                     </div>
                 </div>
-                <div class="bg-white p-6 rounded-lg shadow-lg flex items-center">
-                    <img src="https://img.icons8.com/color/512/google-cloud.png" alt="Google Cloud Logo" class="cert-logo" loading="lazy">
-                    <div>
-                        <h3 class="text-lg font-semibold text-gray-800">Google Cloud Certified - Professional DevOps Engineer</h3>
-                        <p class="text-gray-600">Google Cloud Platform</p>
-                    </div>
-                </div>
-                <div class="bg-white p-6 rounded-lg shadow-lg flex items-center">
-                    <img src="https://img.icons8.com/color/512/google-cloud.png" alt="Google Cloud Logo" class="cert-logo" loading="lazy">
-                    <div>
-                        <h3 class="text-lg font-semibold text-gray-800">Google Cloud Certified - Professional Data Engineer</h3>
-                        <p class="text-gray-600">Google Cloud Platform</p>
-                    </div>
-                </div>
-                <div class="bg-white p-6 rounded-lg shadow-lg flex items-center">
-                    <img src="https://branditechture.agency/wp-content/uploads/2022/03/AXELOS-Logo-PNG.png" alt="AXELOS Logo" class="cert-logo" loading="lazy">
-                    <div>
-                        <h3 class="text-lg font-semibold text-gray-800">ITIL 4 Foundation</h3>
-                        <p class="text-gray-600">AXELOS</p>
-                    </div>
-                </div>
-                <div class="bg-white p-6 rounded-lg shadow-lg flex items-center">
-                    <img src="https://seeklogo.com/images/A/aviatrix-logo-456435.png" alt="Aviatrix Logo" class="cert-logo" loading="lazy">
-                    <div>
-                        <h3 class="text-lg font-semibold text-gray-800">Aviatrix Certified Engineer - Multicloud Networking</h3>
-                        <p class="text-gray-600">Aviatrix</p>
-                    </div>
-                </div>
-                <div class="bg-white p-6 rounded-lg shadow-lg flex items-center">
-                    <img src="https://azure.microsoft.com/en-us/blog/wp-content/uploads/2021/05/Azure-Icon-Fluent-150x150.png" alt="Azure Logo" class="cert-logo" loading="lazy">
-                    <div>
-                        <h3 class="text-lg font-semibold text-gray-800">Azure Fundamentals (AZ-900)</h3>
-                        <p class="text-gray-600">Microsoft Azure</p>
-                    </div>
-                </div>
-                <div class="bg-white p-6 rounded-lg shadow-lg flex items-center">
-                    <img src="https://azure.microsoft.com/en-us/blog/wp-content/uploads/2021/05/Azure-Icon-Fluent-150x150.png" alt="Azure Logo" class="cert-logo" loading="lazy">
-                    <div>
-                        <h3 class="text-lg font-semibold text-gray-800">Azure AI Fundamentals (AI-900)</h3>
-                        <p class="text-gray-600">Microsoft Azure</p>
-                    </div>
-                </div>
-                <div class="bg-white p-6 rounded-lg shadow-lg flex items-center">
-                    <img src="https://azure.microsoft.com/en-us/blog/wp-content/uploads/2021/05/Azure-Icon-Fluent-150x150.png" alt="Azure Logo" class="cert-logo" loading="lazy">
-                    <div>
-                        <h3 class="text-lg font-semibold text-gray-800">Azure Administrator Associate (AZ-104)</h3>
-                        <p class="text-gray-600">Microsoft Azure</p>
-                    </div>
-                </div>
-                <div class="bg-white p-6 rounded-lg shadow-lg flex items-center">
-                    <img src="https://azure.microsoft.com/en-us/blog/wp-content/uploads/2021/05/Azure-Icon-Fluent-150x150.png" alt="Azure Logo" class="cert-logo" loading="lazy">
-                    <div>
-                        <h3 class="text-lg font-semibold text-gray-800">Azure Solutions Architect Expert (AZ-305)</h3>
-                        <p class="text-gray-600">Microsoft Azure</p>
-                    </div>
-                </div>
-                <div class="bg-white p-6 rounded-lg shadow-lg flex items-center">
-                    <img src="https://azure.microsoft.com/en-us/blog/wp-content/uploads/2021/05/Azure-Icon-Fluent-150x150.png" alt="Azure Logo" class="cert-logo" loading="lazy">
-                    <div>
-                        <h3 class="text-lg font-semibold text-gray-800">DevOps Engineer Expert (AZ-400)</h3>
-                        <p class="text-gray-600">Microsoft Azure</p>
-                    </div>
-                </div>
-                <div class="bg-white p-6 rounded-lg shadow-lg flex items-center">
-                    <img src="https://azure.microsoft.com/en-us/blog/wp-content/uploads/2021/05/Azure-Icon-Fluent-150x150.png" alt="Azure Logo" class="cert-logo" loading="lazy">
-                    <div>
-                        <h3 class="text-lg font-semibold text-gray-800">Cybersecurity Architect Expert (SC-100)</h3>
-                        <p class="text-gray-600">Microsoft Azure</p>
-                    </div>
-                </div>
-                <div class="bg-white p-6 rounded-lg shadow-lg flex items-center">
-                    <img src="https://azure.microsoft.com/en-us/blog/wp-content/uploads/2021/05/Azure-Icon-Fluent-150x150.png" alt="Azure Logo" class="cert-logo" loading="lazy">
-                    <div>
-                        <h3 class="text-lg font-semibold text-gray-800">Security Operations Analyst Associate (SC-200)</h3>
-                        <p class="text-gray-600">Microsoft Azure</p>
-                    </div>
-                </div>
+            </div>
+
+            <div class="mt-10 text-center">
+                <a href="#" class="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-gradient-to-r from-blue-500 to-green-500 hover:from-blue-600 hover:to-green-600">
+                    View all blog posts
+                </a>
             </div>
         </div>
     </section>
 
-    <!-- Awards Section -->
-    <section id="awards" class="py-20 bg-gradient-to-r from-yellow-100 to-orange-100">
-        <div class="container mx-auto">
-            <h2 class="text-3xl font-bold text-center mb-10 text-orange-900">Awards & Recognition</h2>
-            <div class="space-y-8">
-                <div class="bg-white p-8 rounded-lg shadow-lg flex items-center">
-                    <img src="https://cdn-icons-png.flaticon.com/512/2583/2583310.png" alt="Trophy Icon" class="award-icon" loading="lazy">
-                    <div>
-                        <h3 class="text-2xl font-semibold text-gray-800">P4 Rating - AWS & DevOps Excellence (FY24 & FY25)</h3>
-                        <p class="text-gray-600 mt-2">Received the highest performance rating (P4) consecutively for demonstrating expertise in AWS services and DevOps toolchains.</p>
+    <!-- GitHub Projects -->
+    <section class="py-16 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center">
+                <h2 class="text-3xl font-extrabold text-gray-900 sm:text-4xl">
+                    Open Source <span class="gradient-text">Projects</span>
+                </h2>
+                <p class="mt-4 max-w-2xl text-xl text-gray-500 mx-auto">
+                    Explore my GitHub repositories and contributions
+                </p>
+            </div>
+
+            <div class="mt-12 grid gap-8 md:grid-cols-2">
+                <div class="bg-white rounded-xl shadow-md overflow-hidden card-hover">
+                    <img class="h-48 w-full object-cover" src="https://binyam.io/wp-content/uploads/2025/05/CleanShot-2025-05-05-at-18.01.58@2x-1024x729.png" alt="Project screenshot">
+                    <div class="p-6">
+                        <h3 class="text-xl font-medium text-gray-900">AI powered Prometheus Alert</h3>
+                        <p class="mt-2 text-gray-600">
+                            Advanced alerting system for Prometheus with AI capabilities
+                        </p>
+                        <div class="mt-4 flex items-center">
+                            <i class="fab fa-github text-gray-500 mr-2"></i>
+                            <a href="#" class="text-blue-600 hover:text-blue-800 font-medium">View on GitHub</a>
+                        </div>
                     </div>
                 </div>
-                <div class="bg-white p-8 rounded-lg shadow-lg flex items-center">
-                    <img src="https://cdn-icons-png.flaticon.com/512/2583/2583310.png" alt="Trophy Icon" class="award-icon" loading="lazy">
-                    <div>
-                        <h3 class="text-2xl font-semibold text-gray-800">Bravo Award - Accenture (FY24)</h3>
-                        <p class="text-gray-600 mt-2">Recognized for completing the highest number of internal training hours across cloud, DevOps, and infrastructure practices.</p>
+
+                <div class="bg-white rounded-xl shadow-md overflow-hidden card-hover">
+                    <img class="h-48 w-full object-cover" src="https://binyam.io/wp-content/uploads/2025/05/image-768x512.png" alt="Project screenshot">
+                    <div class="p-6">
+                        <h3 class="text-xl font-medium text-gray-900">Kubewatch API</h3>
+                        <p class="mt-2 text-gray-600">
+                            API for monitoring Kubernetes clusters in real-time
+                        </p>
+                        <div class="mt-4 flex items-center">
+                            <i class="fab fa-github text-gray-500 mr-2"></i>
+                            <a href="#" class="text-blue-600 hover:text-blue-800 font-medium">View on GitHub</a>
+                        </div>
                     </div>
                 </div>
+            </div>
+
+            <div class="mt-10 text-center">
+                <a href="#" class="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-gray-800 hover:bg-gray-900">
+                    <i class="fab fa-github mr-2"></i> Visit my GitHub
+                </a>
             </div>
         </div>
     </section>
 
     <!-- Contact Section -->
-    <section id="contact" class="py-20 bg-gradient-to-r from-indigo-100 to-blue-100">
-        <div class="container mx-auto text-center">
-            <h2 class="text-3xl font-bold mb-10 text-indigo-900">Contact Me</h2>
-            <p class="text-lg mb-4 text-gray-800">Navi Mumbai | +91-8879314518 | osmanybilal@gmail.com</p>
-            <p class="text-lg mb-6"><a href="https://linkedin.com/in/mohammed-bilal-osmany" class="text-indigo-500 hover:underline">LinkedIn Profile</a></p>
-            <a href="mailto:osmanybilal@gmail.com" class="bg-indigo-600 hover:bg-indigo-700 text-white px-8 py-3 rounded-lg transition-colors duration-300">Send Email</a>
+    <section id="contact" class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="lg:grid lg:grid-cols-2 lg:gap-8">
+                <div class="mb-12 lg:mb-0">
+                    <h2 class="text-3xl font-extrabold text-gray-900 sm:text-4xl">
+                        Let's <span class="gradient-text">Connect</span>
+                    </h2>
+                    <p class="mt-4 text-lg text-gray-500">
+                        Have a project in mind or want to discuss how I can help with your infrastructure needs? Get in touch!
+                    </p>
+                    
+                    <div class="mt-8">
+                        <div class="flex items-center mb-4">
+                            <div class="flex-shrink-0 bg-blue-100 p-3 rounded-lg">
+                                <i class="fas fa-envelope text-blue-600"></i>
+                            </div>
+                            <div class="ml-4">
+                                <h3 class="text-lg font-medium text-gray-900">Email</h3>
+                                <a href="mailto:osmanybilal@gmail.com" class="text-blue-600 hover:text-blue-800">osmanybilal@gmail.com</a>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-center mb-4">
+                            <div class="flex-shrink-0 bg-green-100 p-3 rounded-lg">
+                                <i class="fab fa-whatsapp text-green-600"></i>
+                            </div>
+                            <div class="ml-4">
+                                <h3 class="text-lg font-medium text-gray-900">WhatsApp</h3>
+                                <a href="https://wa.me/8879314518" class="text-blue-600 hover:text-blue-800">8879314518</a>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-center">
+                            <div class="flex-shrink-0 bg-blue-500 p-3 rounded-lg">
+                                <i class="fab fa-linkedin-in text-white"></i>
+                            </div>
+                            <div class="ml-4">
+                                <h3 class="text-lg font-medium text-gray-900">LinkedIn</h3>
+                                <a href="https://linkedin.com/in/mohammed-bilal-osmany" class="text-blue-600 hover:text-blue-800">linkedin.com/in/mohammed-bilal-osmany</a>
+                            </div>
+                        </div>
+                        
+                        <div class="mt-8">
+                            <a href="http://binyam.io/wp-content/uploads/2025/05/Binyam-Seyoum-SPE.pdf" class="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-gradient-to-r from-blue-500 to-green-500 hover:from-blue-600 hover:to-green-600">
+                                <i class="fas fa-download mr-2"></i> Download Resume
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div>
+                    <div class="bg-white shadow-md rounded-lg p-8">
+                        <h3 class="text-lg font-medium text-gray-900 mb-6">Send me a message</h3>
+                        <form>
+                            <div class="mb-4">
+                                <label for="name" class="block text-sm font-medium text-gray-700 mb-1">Name</label>
+                                <input type="text" id="name" name="name" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
+                            </div>
+                            
+                            <div class="mb-4">
+                                <label for="email" class="block text-sm font-medium text-gray-700 mb-1">Email</label>
+                                <input type="email" id="email" name="email" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
+                            </div>
+                            
+                            <div class="mb-4">
+                                <label for="message" class="block text-sm font-medium text-gray-700 mb-1">Message</label>
+                                <textarea id="message" name="message" rows="4" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500"></textarea>
+                            </div>
+                            
+                            <div class="mt-6">
+                                <button type="submit" class="w-full flex justify-center py-3 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-gradient-to-r from-blue-500 to-green-500 hover:from-blue-600 hover:to-green-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500">
+                                    Send Message
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="bg-indigo-800 text-white py-6">
-        <div class="container mx-auto text-center">
-            <p class="text-gray-300">© 2025 Mohammed Bilal Osmany. All rights reserved.</p>
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div>
+                    <a href="#" class="flex items-center">
+                        <img class="h-8 w-8" src="https://via.placeholder.com/32x32/3b82f6/ffffff?text=MBO" alt="MBO">
+                        <span class="ml-2 text-xl font-bold gradient-text">Binyam.io</span>
+                    </a>
+                    <p class="mt-4 text-gray-400">
+                        Engineering Scalable Platforms with a focus on reliability, security, and performance.
+                    </p>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-medium">Quick Links</h3>
+                    <ul class="mt-4 space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white">Home</a></li>
+                        <li><a href="#services" class="text-gray-400 hover:text-white">Services</a></li>
+                        <li><a href="#contact" class="text-gray-400 hover:text-white">Contact</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Blog</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-medium">Connect</h3>
+                    <div class="mt-4 flex space-x-4">
+                        <a href="https://github.com/bosmany" class="text-gray-400 hover:text-white">
+                            <i class="fab fa-github text-2xl"></i>
+                        </a>
+                        <a href="https://www.linkedin.com/in/binyams" class="text-gray-400 hover:text-white">
+                            <i class="fab fa-linkedin text-2xl"></i>
+                        </a>
+                        <a href="https://dev.to/binyam" class="text-gray-400 hover:text-white">
+                            <i class="fab fa-dev text-2xl"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="mt-12 pt-8 border-t border-gray-800 text-center text-gray-400">
+                <p>Copyright © 2025. Designed and Developed by <a href="#" class="text-blue-400 hover:text-blue-300">Mohammed Bilal Osmany</a></p>
+            </div>
         </div>
     </footer>
 
-    <!-- JavaScript for Slider -->
+    <!-- Back to Top Button -->
+    <button id="back-to-top" class="hidden fixed bottom-6 right-6 bg-blue-600 text-white p-3 rounded-full shadow-lg hover:bg-blue-700 transition-all duration-300">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
     <script>
-        let currentSlide = 0;
-        const slides = document.querySelectorAll('.slide');
-        const slider = document.querySelector('.slider');
-        const dotsContainer = document.getElementById('dots');
+        // Mobile menu toggle
+        document.getElementById('mobile-menu-button').addEventListener('click', function() {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        });
 
-        // Create dots for each slide
-        slides.forEach((_, index) => {
-            const dot = document.createElement('div');
-            dot.classList.add('dot');
-            if (index === 0) dot.classList.add('active');
-            dot.addEventListener('click', () => {
-                currentSlide = index;
-                updateSlider();
+        // Back to top button
+        const backToTopButton = document.getElementById('back-to-top');
+        window.addEventListener('scroll', function() {
+            if (window.pageYOffset > 300) {
+                backToTopButton.classList.remove('hidden');
+            } else {
+                backToTopButton.classList.add('hidden');
+            }
+        });
+
+        backToTopButton.addEventListener('click', function() {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    targetElement.scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                }
             });
-            dotsContainer.appendChild(dot);
         });
-
-        const dots = document.querySelectorAll('.dot');
-
-        function updateSlider() {
-            slider.style.transform = `translateX(-${currentSlide * 100}%)`;
-            dots.forEach((dot, index) => {
-                dot.classList.toggle('active', index === currentSlide);
-            });
-        }
-
-        document.getElementById('next').addEventListener('click', () => {
-            currentSlide = (currentSlide + 1) % slides.length;
-            updateSlider();
-        });
-
-        document.getElementById('prev').addEventListener('click', () => {
-            currentSlide = (currentSlide - 1 + slides.length) % slides.length;
-            updateSlider();
-        });
-
-        // Auto-slide every 5 seconds
-        setInterval(() => {
-            currentSlide = (currentSlide + 1) % slides.length;
-            updateSlider();
-        }, 5000);
     </script>
 </body>
 </html>
